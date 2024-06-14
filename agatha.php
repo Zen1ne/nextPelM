@@ -1,6 +1,7 @@
 <?php
 
-include 'API/api.php'
+include 'API/function.php';
+$data=get_data(API_URL);
 ?>
 <!DOCTYPE html>
 <html lang="en">

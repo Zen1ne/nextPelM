@@ -1,6 +1,8 @@
 <?php
 
-include 'API/api.php'
+require 'API/function.php';
+$data=get_data(API_URL);
+$untilMessage=get_until_message($data["days_until"]);
 ?>
 
 <head>
@@ -22,11 +24,10 @@ include 'API/api.php'
         <img width="300" src="<?=$data["poster_url"]?> " alt="<?=$data["title"]?>" style="border-radius:16px"/>
     </section>
     <hgroup>
-        <h3><?=$data["title"];?> se estrena en <?=$data["days_until"];?> dias</h3>
-        <p>Fecha de estreno <?=$data["release_date"]?></p>
+        <h3> <?=$data["title"];?> <?=$untilMessage?></h3>
+        <p>Fecha de estreno<?=$data["release_date"]?></p>
         <p>La siguiente es
-            <a href="agatha.php"><?=$data["following_production"]["title"]?>
-        </a></p>
+            <a href="agatha.php"><?=$data["following_production"]["title"]?></a></p>
 
     </hgroup>
 

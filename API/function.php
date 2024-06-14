@@ -2,7 +2,17 @@
 
 
 declare(strict_types=1);
-const API_URL="https://whenisthenextmcufilm.com/api";
+
+function render_template(string $template, array $data=[])
+{
+    extract($data);
+    require "templates/$template.php";
+    
+    
+
+
+}
+
 
 function get_data(string $url):array
 {
@@ -28,7 +38,6 @@ function get_until_message(int $days): string
 
 
 }
-
 
 
 ?>

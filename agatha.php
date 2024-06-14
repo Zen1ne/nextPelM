@@ -1,6 +1,7 @@
 <?php
 
 include 'API/function.php';
+include 'API/const.php';
 $data=get_data(API_URL);
 ?>
 <!DOCTYPE html>
@@ -8,7 +9,7 @@ $data=get_data(API_URL);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?=$data["following_production"]["title"]?></title>
+    <title>Proximo proyecto de Marvel: <?=$data["following_production"]["title"]?></title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
